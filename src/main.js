@@ -1,13 +1,16 @@
-import { pingPong } from './scripts';
+import { myTriangle } from './scripts';
 import './styles.css';
 
-$(document).ready(function() {
-  $('#ping-pong-form').submit(function(event) {
+$(document).ready(function(){
+  $("button#start").click(function(event){
+    const a = parseInt($("input.first").val());
+    const b = parseInt($("input.second").val());
+    const c = parseInt($("input.third").val());
     event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element) {
-      $('#solution').append("<li>" + element + "</li>");
-    });
+    const triangleValue = myTriangle(a, b, c);
+    $("#answer").show().text(triangleValue);
+  });
+  $("button#restart").click(function(){
+    location.reload();
   });
 });

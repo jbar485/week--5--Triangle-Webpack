@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <title>Template</title>
-  </head>
-  <body>
-    <p>Hey</p>
-  </body>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <title>Template</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Triangle Tracker</h1>
+    </div>
+    <div class="card border-danger mb-3">
+      <div class="card-header">Your Triangle Predicament</div>
+      <div class="card-body text-danger">
+        <form>
+          <div class="form-row">
+            <div class="col">
+              <input type="number" class="form-control first" placeholder="A">
+            </div>
+            <div class="col">
+              <input type="number" class="form-control second" placeholder="B">
+            </div>
+            <div class="col">
+              <input type="number" class="form-control third" placeholder="C">
+            </div>
+          </div>
+        </form>
+        <button type="button" class="btn btn-danger" id="start">Submit</button>
+      </div>
+    </div>
+    <div class="card border-dark mb-3" id="final">
+      <div class="card-header">Answer</div>
+      <div class="card-body text-dark" id="answer"></div>
+    </div>
+
+  </div>
+  <button type="button" class="btn btn-dark" id="restart">Reload</button>
+</body>
 </html>
