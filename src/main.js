@@ -1,14 +1,15 @@
-import { myTriangle } from './scripts';
+import { MyTriangle } from './scripts';
 import './styles.css';
 
 $(document).ready(function(){
   $("button#start").click(function(event){
-    const a = parseInt($("input.first").val());
-    const b = parseInt($("input.second").val());
-    const c = parseInt($("input.third").val());
+    let a = parseInt($("input.first").val());
+    let b = parseInt($("input.second").val());
+    let c = parseInt($("input.third").val());
     event.preventDefault();
-    const triangleValue = myTriangle(a, b, c);
-    $("#answer").show().text(triangleValue);
+    let triangleValue = new MyTriangle(a, b, c);
+    let finalTriangle = triangleValue.checkType();
+    $("#answer").show().text(finalTriangle);
   });
   $("button#restart").click(function(){
     location.reload();
